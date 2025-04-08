@@ -65,18 +65,16 @@ var myPieChart = new Chart(ctx, {
         }]
     },
     options: {
-        // Add wedging effect
-        
-        // Removes border
+
         elements: {
             arc: {
                 borderWidth: 0
             }
         },
         
-        // Disable legends
+
         legend: {
-            display: false // Set display to false to hide legends
+            display: false
         }
     }
 });

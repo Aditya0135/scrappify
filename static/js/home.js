@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
 
         if (!validateURL()) {
-            return; // Show toast and stop submit
+            return;
         }
 
         const form = e.target;

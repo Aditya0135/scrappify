@@ -84,14 +84,10 @@ def resultpg():
     except Exception:
         return jsonify({"message": "Invalid URL format!"}), 400
 
-    # Then check domain
     if "flipkart.com" not in parsed_url.netloc:
         return jsonify({"message": "Only Flipkart product review links are supported."}), 400
-
-    # Then check review URL pattern (simplify it!)
     if "/product-reviews/" not in parsed_url.path:
         return jsonify({"message": "Only Flipkart product *review* links are accepted!"}), 400
-
 
     all_reviews = []
     num_pages = 50
