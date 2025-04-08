@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/nav.css">
+    <title>How It Works - Scrappify</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('../static/photos/0bbed357-ed9f-47bf-8356-7136422bca8b.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #c9d1d9;
+}
+
+header {
+    background-color: #161b22;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #30363d;
+}
+
+header h1 {
+    color: #58a6ff;
+    font-size: 2em;
+}
+
+header nav a {
+    color: #58a6ff;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.1em;
+}
+
+header nav a:hover {
+    color: #79c0ff;
+}
+
+.container {
+    padding: 30px 50px;
+    max-width: 1200px;
+    margin:auto;
+}
+
+h1 {
+    color: #58a6ff;
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.step {
+    margin-bottom: 30px;
+    padding: 30px;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    background-color: #161b22;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step img {
+    max-width: 300px;
+    height: auto;
+}
+
+
+.step h2 {
+    color: #79c0ff;
+    margin-bottom: 8px;
+    font-size: 1.8em;
+}
+
+.step p, .step ul li {
+    color: #8b949e;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.more-content {
+    display: none;
+    margin-top: 8px;
+}
+
+.toggle-link {
+    color: #58a6ff;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 1.1em;
+}
+
+footer {
+    background-color: #161b22;
+    padding: 12px;
+    text-align: center;
+    color: #8b949e;
+    border-top: 2px solid #30363d;
+    font-size: 1em;
+}
+
+    </style>
+    <script>
+        function toggleContent(id, link) {
+            const content = document.getElementById(id);
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                link.innerText = 'Show Less';
+            } else {
+                content.style.display = 'none';
+                link.innerText = 'Show More';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="Navigation_bar">
+        <div class="logo"><img src="../static/photos/Logo.png" class="fimg">Scrappify</div>
+        <div style="display: flex;">
+            <a href="home.html" class="items">Home</a>
+            <a href="/" class="items">How it works?</a>
+            <a href="/" class="items">Blog</a>
+        </div>
+
+        <div class="box3">
+            <button class="signup">Sign up</button>
+            <button class="signup">Login</button>
+        </div>
+    </div>
+
+<div class="container">
+    <h1>How It Works</h1>
+    <div class="step">
+        <img src="../static/photos/s1.png" alt="Paste Link">
+        <div>
+            <h2>Step 1: Provide the Review Link</h2>
+            <p>Paste the Flipkart product review link into the input field on our homepage.</p>
+            <div class="more-content" id="more1">
+                <ul>
+                    <li>The link is analyzed for validity and structure.</li>
+                    <li>Ensuring the correct format helps in accurately scraping data.</li>
+                    <li>Pre-validation steps ensure smoother subsequent processing.</li>
+                    <li>Incorrect links are flagged for user correction.</li>
+                </ul>
+            </div>
+            <span class="toggle-link" onclick="toggleContent('more1', this)">Show More</span>
+        </div>
+    </div>
+    <div class="step">
+        <img src="../static/photos/Scrapping_reviews.png" alt="Scraping Data">
+        <div>
+            <h2>Step 2: Scraping Reviews</h2>
+            <p>Our algorithm, powered by BeautifulSoup, efficiently scrapes reviews.</p>
+            <div class="more-content" id="more2">
+                <ul>
+                    <li>BeautifulSoup parses HTML to locate and extract review content.</li>
+                    <li>It navigates through DOM structures using tags and attributes.</li>
+                    <li>Data is then cleaned, removing unnecessary HTML tags and whitespace.</li>
+                    <li>Edge cases, like missing data or inconsistent layouts, are handled robustly.</li>
+                </ul>
+            </div>
+            <span class="toggle-link" onclick="toggleContent('more2', this)">Show More</span>
+        </div>
+    </div>
+    <div class="step">
+        <img src="../static/photos/Sentiment_score.png" alt="Sentiment Analysis">
+        <div>
+            <h2>Step 3: Analyzing Sentiments</h2>
+            <p>Reviews are analyzed using VADER sentiment analysis.</p>
+            <div class="more-content" id="more3">
+                <ul>
+                    <li>VADER is a lexicon-based sentiment analysis tool optimized for social media.</li>
+                    <li>It computes polarity scores to classify sentiments as positive, neutral, or negative.</li>
+                    <li>Complexity is managed by handling negations and degree modifiers.</li>
+                    <li>Edge cases, like sarcasm, are minimally addressed but noted for potential refinement.</li>
+                </ul>
+            </div>
+            <span class="toggle-link" onclick="toggleContent('more3', this)">Show More</span>
+        </div>
+    </div>
+    <div class="step">
+        <img src="../static/photos/Chart_img.png" alt="Data Presentation">
+        <div>
+            <h2>Step 4: Presenting Data through Graphs</h2>
+            <p>The analyzed data is visualized through a pie chart, highlighting sentiment distribution.</p>
+            <div class="more-content" id="more4">
+                <ul>
+                    <li>The graph displays the percentage of positive, neutral, and negative reviews.</li>
+                    <li>This visualization helps users quickly understand the overall sentiment.</li>
+                    <li>It is dynamically generated based on real-time analyzed data.</li>
+                    <li>Interactive elements in the graph enhance data interpretation.</li>
+                </ul>
+            </div>
+            <span class="toggle-link" onclick="toggleContent('more4', this)">Show More</span>
+        </div>
+    </div>
+</div>
+
+<footer>
+    Scrappify.
+</footer>
+
+</body>
+</html>

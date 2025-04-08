@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Engineering Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/nav.css">
+    <link rel="stylesheet" href="static/home_main.css">
+    <!--added fonts from google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--NAVBAR SECTION-->
+    <div class="Navigation_bar">
+        <div class="logo"><img src="static/photos/Logo.png" class="fimg">Scrappify</div>
+        <div style="display: flex;">
+            <a href="home.html" class="items">Home</a>
+            <a href="/How_it_works.html" class="items">How it works?</a>
+            <a href="/" class="items">Blog</a>
+        </div>
+        
+        <div class="box3">
+            <button class="signup">Sign up</button>
+            <button class="signup">Login</button>
+        </div>
+    </div>
+
+    <!--END OF NAVBAR SECTION-->
+
+    <!--MIDDLE SECTION-->
+    <div class="main">
+        <div class="box1">
+                <div class="box1_p1">
+                    <div class="heading">Explore Reviews with Ease</div>
+                    <div class="txt">Say goodbye to tedious manual review reading! With ReviewAnalyzer, you can effortlessly analyze reviews from various online platforms by simply submitting the link. Our advanced scraping algorithms gather data swiftly, saving you valuable time and effort.</div>
+
+                    <!-- Form with Progress Bar -->
+                    <form method="POST" action="." id="reviewForm">
+                        <div class="wrapper">
+                            <input type="text" name="urlToBeSent" placeholder="Paste link here..." id="urlInput" class="linkbox" required>
+                            <button type="submit"><img src="static/photos/images.png" alt="Submit"></button>
+                        </div>
+                    </form>
+
+        <!-- Progress Bar -->
+    <div id="progressBarContainer" style="display:none; margin-top: 10px;">
+        <p>Scraping and analyzing reviews...</p>
+        <div style="width: 100%; background: #ccc; border-radius: 5px;">
+            <div id="progressBar" style="width: 0%; height: 10px; background: #4CAF50; border-radius: 5px;"></div>
+        </div>
+    </div>
+</div>
+
+                <div class="main__image--container">
+                    <!--
+                    <img src="" alt="pic" id="main__img">
+                    -->
+                </div>
+        </div>
+        <div class="box2">
+            <div class="quotes">
+                <div class="quotes_img"><img src="static/photos/qimg.png"></div>
+                <div class="quotes_txt">" Transform feedback into action. Drive success with insights "</div>
+            </div>
+            <div class="quotes_alt">
+                <div class="quotes_txt">" See beyond the words. Uncover sentiments, reveal trends. "</div>
+                <div class="quotes_img"><img src="static/photos/quaoteimg.jpg"></div>
+            </div>
+            <div class="quotes">
+                <div class="quotes_img"><img src="static/photos/quote img.png"></div>
+                <div class="quotes_txt">" Discover the power of feedback. Unlock insights, make informed decisions. "</div>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="reviwes"></div>
+        </div>
+    </div>
+
+<div id="toast">Only Flipkart review links are accepted!</div>
+<script src="../static/js/home.js"></script>
+</body>
+</html>

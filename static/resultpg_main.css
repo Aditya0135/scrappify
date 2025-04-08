@@ -1,0 +1,61 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: Arial;
+    background-color: rgb(0, 0, 20);
+}
+.main{
+    height: 100%;
+    padding-top: 70px;
+}
+.title{
+    display: flex;
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    width: 100%;
+    padding-top: 10px;
+    justify-content: center;
+}
+.result_holder{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:rgba(255, 255, 255, 0.059);
+    backdrop-filter:blur(5px) ;
+    margin:10px 50px 10px 50px ;
+    padding: 20px 10px 20px 10px;
+    border: none;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.result_txt{
+    text-align: left;
+    color: white;
+    font-size: 3rem;
+    padding-left: 50px;
+}
+#result_comment{
+    font-weight: bold;
+    margin-top: 20px;
+}
+.legend{
+    font-size: 3rem;
+    color: white;
+}
+.pos{
+    color: rgb(0, 148, 0);
+}
+.nut{
+    color: rgb(43, 76, 148);
+}
+.neg{
+    color: rgb(138, 0, 0);
+}
+.graph_holder{
+    max-width: 800px;
+    max-height: 800px;
+    justify-self: center;
+}

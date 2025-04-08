@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/nav.css">
+    <link rel="stylesheet" href="static/resultpg_main.css">
+</head>
+<body>
+    <!--NAVBAR SECTION-->
+    <div class="Navigation_bar">
+        <div class="logo"><img src="static/photos/Logo.png" class="fimg">Scrappify</div>
+        <div style="display: flex;">
+            <a href="home.html" class="items">Home</a>
+            <a href="www.google.com" class="items">How it works?</a>
+            <a href="https://weclassifytexts.blogspot.com/?zx=d9afebf2eb915246" class="items">Blog</a>
+        </div>
+        
+        <div class="box3">
+            <button class="signup">Sign up</button>
+            <button class="signup">Login</button>
+        </div>
+    </div>
+    <!--END OF NAVBAR SECTION-->
+
+    <div class="main">
+        <div class="title">Here is your result</div>
+        <div class="result_holder">
+            <div class="result_txt">
+                <div class="legend">Positive: <span style="color: rgb(0, 148, 0);" id="Positive"></span></div >
+                <div class="legend">Neutral : <span style="color: rgb(43, 76, 148);" id="Nuteral"></span></div >
+                <div class="legend">Negative : <span style="color: rgb(138, 0, 0);" id="Negative"></span></div >
+                <div id="result_comment"></div>
+            </div>
+            <div class="graph_holder"><canvas id="myChart" height="400px" width="400px"></canvas>
+            </div>
+        </div> 
+    </div>
+    <!-- This is for chart-->
+    <script>
+        var pos_num = {{ data['pos_num'] }};
+        var neg_num = {{ data['neg_num'] }};
+        var neu_num = {{ data['neu_num'] }};
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--This if for result comments-->
+    <script src="static/js/resultpg.js"></script>
+    <!--
+        Add the most positive and most negative comment
+    -->
+</body>
+</html>
